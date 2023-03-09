@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MathOptions } from './math-options';
+import { MathProblem } from './math-problem';
 
 @Component({
   selector: 'app-root',
