@@ -1,0 +1,20 @@
+.math-problem {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 25%;
+  height: 50%;
+}
+
+@media screen AND (max-width: 700px) {
+  .math-problem {
+    width: 75%;
+  }
+}
+
+@media screen AND (max-width: 900px) {
+  .math-problem {
+    width: 50%;
+  }
+}

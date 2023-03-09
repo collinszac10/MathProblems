@@ -1,0 +1,91 @@
+<p-sidebar
+  [(visible)]="sidebarVisible"
+  [baseZIndex]="10000"
+  [dismissible]="false"
+  [modal]="false"
+  [showCloseIcon]="false"
+>
+  <div class="card">
+    <div class="field">
+      <h4>Problem Types</h4>
+      <p-selectButton
+        multiple="multiple"
+        [options]="problemTypes"
+        [(ngModel)]="selectedProblemTypes"
+        optionValue="name"
+        (onChange)="onChange()"
+        styleClass="p-button-sm"
+      >
+        <ng-template let-item>
+          <fa-icon [icon]="item.icon"></fa-icon>
+        </ng-template>
+      </p-selectButton>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field">
+      <h4>Right to Left Text</h4>
+      <p-inputSwitch
+        [(ngModel)]="rightToLeftInput"
+        (onChange)="onChange()"
+      ></p-inputSwitch>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field">
+      <h4>No Negative Answers</h4>
+      <p-inputSwitch
+        [(ngModel)]="disableNegativeAnswers"
+        (onChange)="onChange()"
+      ></p-inputSwitch>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field">
+      <span class="p-float-label">
+        <p-inputNumber
+          inputId="integeronly"
+          [(ngModel)]="numOfProblems"
+          (onChange)="onChange()"
+          id="numOfProblems"
+        ></p-inputNumber>
+        <label for="numOfProblems">Number Of Problems</label>
+      </span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field">
+      <span class="p-float-label">
+        <p-inputNumber
+          inputId="integeronly"
+          [(ngModel)]="numeratorLength"
+          (onChange)="onChange()"
+          id="numeratorLength"
+        ></p-inputNumber>
+        <label for="numeratorLength">Numerator Length</label>
+      </span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field">
+      <span class="p-float-label">
+        <p-inputNumber
+          inputId="integeronly"
+          [(ngModel)]="denominatorLength"
+          (onChange)="onChange()"
+          id="denominatorLength"
+        ></p-inputNumber>
+        <label for="denominatorLength">Denominator Length</label>
+      </span>
+    </div>
+  </div>
+</p-sidebar>
+<button
+  pButton
+  pRipple
+  type="button"
+  (click)="toggleSidebar()"
+  icon="pi pi-cog"
+  class="p-button-lg p-button-rounded math-options-button"
+  [class.open]="sidebarVisible"
+></button>

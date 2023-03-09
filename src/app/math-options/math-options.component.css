@@ -1,0 +1,10 @@
+.math-options-button {
+  border-radius: 0 50% 50% 0 !important;
+  margin-left: -6px;
+  z-index: 10000;
+  float: left;
+}
+.math-options-button.open {
+  margin-left: 19.5rem;
+  transition: 150ms cubic-bezier(0, 0, 0.2, 1);
+}

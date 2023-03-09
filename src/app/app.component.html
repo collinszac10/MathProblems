@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="content">
+    <div class="grid">
+      <div class="col-6 col-offset-3">
+        <div class="math-problem">
+          <p-card
+            *ngFor="let i of items; index as i"
+            styleClass="h-full align-items-center justify-content-center flex"
+          >
+            <ng-template pTemplate="content"> {{ i }} </ng-template>
+          </p-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div app-math-options></div>
+  </div>
+</div>
